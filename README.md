@@ -1,6 +1,6 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+Building a route planner by extending IO2D graphics rendering library and using the A* Search Algorithm for finding and displaying a path between any 2 points on a map, just as you might see in a desktop or mobile mapping application, using real map data from  [the OpenStreeMap project.](https://www.openstreetmap.org/)
 
 <img src="map.png" width="600" height="450" />
 
