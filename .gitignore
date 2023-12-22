@@ -1,0 +1,7 @@
+*.swp
+*.o
+build/
+bin/
+thirdparty/clang+llvm-6.0.0-x86_64-apple-darwin
+thirdparty/P0267_RefImpl
+.vscode
