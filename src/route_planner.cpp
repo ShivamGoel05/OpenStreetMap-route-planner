@@ -8,17 +8,17 @@ RoutePlanner::RoutePlanner(RouteModel &model, float start_x, float start_y, floa
     end_x *= 0.01;
     end_y *= 0.01;
 
-	start_node = &m_Model.FindClosestNode(start_x, start_y);
+    start_node = &m_Model.FindClosestNode(start_x, start_y);
     end_node = &(m_Model.FindClosestNode(end_x, end_y));
 }
 
 float RoutePlanner::CalculateHValue(RouteModel::Node const *node) {
-	float HValue = node->distance(*(this->end_node));
+    float HValue = node->distance(*(this->end_node));
     return HValue;
 }
 
 void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
-	// Populating the neighbors.
+    // Populating the neighbors.
     current_node->FindNeighbors();
   
     for (auto *neighbor : (*current_node).neighbors) {
@@ -39,7 +39,7 @@ bool Compare(RouteModel::Node *node_a, RouteModel::Node *node_b) {
 }
 
 RouteModel::Node *RoutePlanner::NextNode() {
-	// Sorting open nodes.
+    // Sorting open nodes.
     std::sort(this->open_list.begin(), this->open_list.end(), &Compare);
   
     // Create a pointer to the node in the list with the lowest f value.
